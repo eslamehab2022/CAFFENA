@@ -1,0 +1,934 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/*=====================================================================================================================================*/
+/*==================================================== start navbar ===================================================================*/
+
+.navbar-brand img {
+  width: 70px;
+  height: auto;
+}
+.nav-item {
+  margin-right: 25px;
+}
+.nav-link {
+  color: #fff;
+  transition: 0.4s ease;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 22px;
+  font-weight: 500;
+  margin: 0px 15px;
+}
+#sign_in {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+  transition: 0.5s ease;
+  -webkit-transition: all 0.7s;
+}
+#sign_in::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: #c7a17a;
+  z-index: -3;
+  transition: 0.5s ease;
+}
+#sign_in:hover:before {
+  width: 100%;
+}
+#sign_in:hover {
+  color: #fff;
+}
+.nav-link:hover {
+  color: #c7a17a;
+}
+.nav-link.active {
+  color: #c7a17a;
+}
+.users {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.413);
+  transition: 0.3s ease;
+  padding-top: 4px;
+}
+.users:hover {
+  color: #fff;
+}
+.navbar-toggler-icon {
+  color: #fff;
+}
+/* start login_page*/
+
+/*end  login_page*/
+.creat {
+  font-family: "Jost", Sans-serif;
+  margin: 15px 177px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 5px 5px;
+  font-size: 18px;
+  border-radius: 0.5rem;
+  background-color: #c7a17a;
+}
+.login_page a {
+  color: #fff;
+}
+.quesition {
+  padding: 60px 234px;
+  color: #c7a17a;
+  position: relative;
+  z-index: 2;
+  background: #000;
+}
+.quesition span {
+  z-index: 303;
+  background: #000;
+  font-size: 20px;
+}
+.quesition::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - -4px);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #c7a17a;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .navbar {
+    background-color: black !important;
+  }
+
+  .creat {
+    margin: 0px 65px;
+  }
+
+  .quesition {
+    padding: 60px 103px;
+  }
+
+  .socials {
+    padding-top: 30px !important;
+  }
+  .pic {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .pic {
+    display: none;
+  }
+  .navbar {
+    background-color: black !important;
+  }
+}
+
+/* cart proudact*/
+.show_cart {
+  position: fixed;
+  width: 545px;
+  height: 100vh;
+  background-color: rgb(7, 7, 7);
+  top: 0;
+  right: -564px;
+  z-index: 999000;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  overflow: hidden;
+}
+.close {
+  right: 0;
+}
+.cart_1 {
+  background: #c7a07ae1;
+  color: #000;
+  padding: 30px;
+  height: 60px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart_1 h5 {
+  letter-spacing: 2px;
+  font-family: "Jost", sans-serif;
+  font-weight: bold;
+  font-size: 25;
+  color: #fff;
+}
+.cart_1 i {
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+.proudact span {
+  padding: 3px;
+  color: #c7a17a;
+  cursor: pointer;
+}
+.proudact p {
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.proudact .plus {
+  color: #c7a17a;
+}
+
+.proudact img {
+  border-radius: 50%;
+  cursor: pointer;
+}
+.price {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  padding: 18px 0px;
+}
+
+.count p {
+  color: #c7a17a;
+}
+.delet {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.serv {
+  margin: 5px 0px;
+}
+#del {
+  padding: 5px;
+}
+.add {
+  margin-top: 70px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.add i {
+  font-size: 20px;
+  margin: 0px 10px;
+  color: #fff;
+  transition: 0.5s ease;
+}
+.add i:hover {
+  color: #c7a17a;
+}
+#CONTINUE {
+  padding: 5px 5px;
+  background-color: #c7a17a;
+}
+@media screen and (max-width: 767px) {
+  .show_cart {
+    width: 100%;
+    overflow: scroll;
+  }
+  .price {
+    display: flex;
+  }
+  .line p {
+    width: 90% !important;
+    padding-left: 30px;
+    margin-top: 30px;
+  }
+  .proudact img {
+    border-radius: 50%;
+    width: 80% !important;
+    padding-left: 10%;
+  }
+  .proudact span {
+    padding-left: 1px;
+  }
+  .proudact img {
+    padding-right: 40px;
+  }
+  .add i {
+    margin: 0px 10px;
+  }
+  .proudact .plus {
+    color: #c7a17a;
+  }
+}
+/* cart proudact*/
+/* start loading*/
+.cont {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999999999999999999999999999;
+  background-color: #ffd883;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .cont img {
+    width: 90%;
+    padding-top: 200px;
+  }
+}
+/* End loading*/
+
+/*==================================================== End navbar ===================================================================*/
+
+/*==================================================== start home ===================================================================*/
+#HOME {
+  background-image: url(img/testimonial-bg-1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 750px;
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.opactiy {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 800px;
+}
+.caption {
+  padding-top: 7%;
+  width: 40%;
+  padding-left: 50px;
+}
+.caption h1 {
+  font-family: "Bebas Neue", "cursive";
+  font-weight: 400;
+  font-size: 90px;
+  letter-spacing: 2px;
+  padding-bottom: 30px;
+}
+.caption p {
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+}
+.action {
+  padding: 40px;
+  display: flex;
+}
+.bt1 {
+  padding: 15px 50px;
+  margin-left: 20px;
+  color: #fff;
+  background-color: #c7a17a;
+  font-family: "Jost", Sans-serif;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.bt1 a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Jost", Sans-serif;
+  font-weight: 500;
+}
+.bt1::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-color: #32323d;
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  z-index: -1;
+}
+.bt1:hover::after {
+  width: 100%;
+}
+.bt1:hover {
+  color: #fff;
+  border: none;
+}
+.bt2 {
+  border-radius: 8px;
+  padding: 15px 50px;
+  margin-left: 30px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid rgba(164, 160, 160, 0.735);
+  font-family: "Jost", Sans-serif;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+.bt2::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-color: #c7a17a;
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  z-index: -1;
+}
+.bt2:hover::after {
+  width: 100%;
+}
+.bt2:hover {
+  color: #fff;
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-item {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  #HOME {
+    background-image: url(img/testimonial-bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+  .caption {
+    text-align: center;
+    padding-top: 30%;
+    width: 85%;
+    padding-left: 50px;
+  }
+  .caption h1 {
+    font-size: 44px;
+  }
+  .caption p {
+    font-size: 19px;
+    text-align: left;
+  }
+  .action {
+    padding-top: 90px;
+    display: flex;
+  }
+  .bt1 {
+    padding: 15px 15px;
+    font-size: 12px;
+  }
+  .bt2 {
+    padding: 15px 15px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .action {
+    padding-top: 60px;
+    display: flex;
+  }
+}
+/*==================================================== End home ===================================================================*/
+/*==================================================== start about ===================================================================*/
+.collaction {
+  padding-top: 100px;
+}
+.collaction_2 h6 {
+  padding-bottom: 40px;
+  color: #c7a17a;
+}
+.collaction_2 p {
+  padding-top: 10px;
+}
+
+.about-2 {
+  position: absolute;
+  top: 1139px;
+  left: 5%;
+}
+
+.check {
+  display: flex;
+  padding-top: 50px;
+  align-items: center;
+}
+.check i {
+  border: 1px solid #c7a17a;
+  padding: 10px;
+  border-radius: 7px;
+  transition: all 0.3s ease-in;
+}
+.check i:hover {
+  background-color: #c7a17a;
+  color: #fff;
+}
+.check h5 {
+  padding-left: 25px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-2 {
+    position: absolute;
+    top: 1228px;
+    left: 7%;
+    width: 100px;
+  }
+  .collaction_2 {
+    margin-top: 80px;
+    margin-left: 20px;
+  }
+  .collaction_2 h6 {
+    padding-bottom: 30px;
+  }
+  .check {
+    margin-left: 20px;
+  }
+  .check h5 {
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 767px) {
+  .nav-item {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .caption {
+    width: 60%;
+  }
+  .caption h1 {
+    font-size: 80px;
+  }
+
+  .check h5 {
+    font-size: 22px;
+  }
+  .about-2 {
+    position: absolute;
+    top: 1254px;
+    left: 5%;
+  }
+  .collaction_2 {
+    margin-top: 40px;
+  }
+  .collaction_2 h6 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .about-2 {
+    position: absolute;
+    top: 1185px;
+    left: 5%;
+  }
+}
+.CHOOSE {
+  width: 800px;
+  text-align: center;
+  margin: 80px auto;
+  padding: 20px;
+}
+.CHOOSE h2 {
+  font-size: 40px;
+  line-height: 57px;
+  text-transform: uppercase;
+}
+.CHOOSE h6 {
+  display: inline-block;
+  background-color: #c7a17a;
+  padding: 5px 10px;
+}
+.SERVICE {
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 20px 0px;
+  position: relative;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 18px;
+}
+.SERVICE:hover .circle {
+  left: 45%;
+  top: 19%;
+}
+.SERVICE img {
+  width: 80px;
+}
+.SERVICE h2 {
+  text-transform: uppercase;
+  padding: 15px 0px;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Bebas Neue", "cursive";
+}
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #c7a07aa8;
+  left: 35%;
+  top: 21%;
+  transition: all 0.4s ease;
+}
+.titel_CHEF {
+  margin: 30px auto;
+  text-align: center;
+  padding: 15px 0px;
+}
+.titel_CHEF h6 {
+  color: #c7a17a;
+}
+.teams {
+  border: 1px solid #c7a17a;
+  margin: 10px;
+  text-align: center;
+  padding-top: 27px;
+  transition: all 0.3s ease;
+  border-radius: 18px;
+}
+.teams:hover img {
+  border-radius: 0px 60px 60px 70px;
+}
+.teams img {
+  width: 280px;
+  border-radius: 70px 60px 60px 0px;
+  box-sizing: border-box;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  outline: none;
+}
+
+.teams h4 {
+  padding-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.teams p {
+  color: #c7a17a;
+  text-align: left;
+  padding-left: 20px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 767px) {
+  .CHOOSE {
+    width: 300px;
+    text-align: center;
+    margin: 80px auto;
+    padding: 20px;
+  }
+  .CHOOSE h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 991px) and (min-width: 767px) {
+  .CHOOSE {
+    width: 672px;
+  }
+
+  .CHOOSE h2 {
+    font-size: 35px;
+  }
+}
+
+/*==================================================== End about ===================================================================*/
+
+/*==================================================== start shop ===================================================================*/
+.proudact {
+  padding-top: 90px;
+  position: relative;
+}
+.proudact h2 {
+  padding-bottom: 25px;
+  color: #c7a17a;
+}
+#cups {
+  border-radius: 0px;
+}
+.proudact img {
+  padding-left: 30%;
+}
+.proudact h5 {
+  margin-top: 15px;
+}
+
+.proudact .bt1 {
+  margin-top: 80px;
+}
+.view h6 {
+  margin: 30px 0px;
+  background-color: #c7a17a;
+  display: inline-block;
+  padding: 5px;
+}
+.view h1 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: "Bebas Neue", "cursive";
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.coffe {
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #c7a17a;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.coffe img {
+  border-radius: 20px;
+  width: 100%;
+  transition: all 0.7s ease;
+}
+.coffe img:hover {
+  transform: scale(0.9);
+}
+.coffe span,
+i {
+  color: #c7a17a;
+  padding-top: 15px;
+}
+.coffe h6 {
+  color: #fff;
+}
+
+/*==================================================== End shop =====================================================*/
+
+/*==================================================== start contact ===============================================*/
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.contact a {
+  text-decoration: none;
+  color: #c7a17a;
+}
+.contact h4 {
+  font-family: "Bebas Neue", Sans-serif;
+  letter-spacing: 2px;
+}
+
+.flat {
+  border: 1px solid #c7a17a;
+  border-radius: 18px;
+}
+form {
+  width: 80%;
+  margin: auto;
+}
+.inputs {
+  display: flex;
+  justify-content: space-around;
+}
+.inputs input {
+  width: 48%;
+}
+
+input {
+  width: 100%;
+  margin: 20px 0px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.648);
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border-radius: 9px;
+  padding: 0px 20px;
+}
+#once {
+  display: block;
+  margin: 20px auto;
+}
+textarea {
+  margin: 10px auto;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.648);
+  border-radius: 9px;
+  width: 100%;
+  height: 300px;
+  color: #fff;
+  padding: 10px 20px;
+}
+@media screen and (max-width: 767px) {
+  .inputs input {
+    width: 100%;
+  }
+  .inputs {
+    display: block;
+  }
+}
+@media screen and (max-width: 991px) {
+  .inputs input {
+    width: 100%;
+  }
+  .inputs {
+    display: block;
+  }
+}
+/************************************start two page*******************************************/
+/*sing_page thanks*/
+.sing_page {
+  width: 600px;
+  margin: 20px auto;
+}
+.logo_thank {
+  margin: 30px 50px;
+  width: 150px;
+}
+.logo_thank img {
+  width: 100%;
+}
+.sing_page h1 {
+  font-family: "Bebas Neue", "cursive";
+  font-size: 49px;
+  letter-spacing: 3px;
+  font-weight: lighter;
+}
+.sing_page span {
+  text-transform: capitalize;
+  color: #c7a17a;
+  font-size: 59px;
+}
+.sing_page i {
+  font-size: 90px;
+  padding: 67px 186px;
+  animation: done 1.5s infinite;
+}
+@keyframes done {
+  0%,
+  10%,
+  30%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  60%,
+  70% {
+    transform: translateY(-15px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .sing_page {
+    width: 300px;
+    margin: 40px auto;
+  }
+  .sing_page h1 {
+    font-size: 25px;
+  }
+  .sing_page span {
+    font-size: 39px;
+  }
+  .sing_page i {
+    padding: 67px 115px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .sing_page {
+    width: 600px;
+    margin: 80px auto;
+  }
+  .sing_page h1 {
+    font-size: 60px;
+  }
+  .sing_page span {
+    font-size: 79px;
+  }
+  .sing_page i {
+    padding: 67px 242px;
+  }
+}
+/*sing_page thanks*/
+
+/************************************end two page*******************************************/
+
+/*==================================================== End contact ======================================================*/
+
+/*==================================================== start footer ===============================================*/
+footer {
+  padding-top: 60px;
+}
+
+.Subscribe {
+  width: 230px;
+}
+.ct {
+  padding: 10px;
+}
+.social i {
+  color: rgba(255, 255, 255, 0.836);
+  font-size: 22px;
+  padding: 6px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.social i:hover {
+  border-radius: 9px;
+  border: 1px solid #c7a17a;
+}
+@media screen and (max-width: 767px) {
+  .social {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .social {
+    margin-top: 40px;
+  }
+}
+.up {
+  color: #000;
+  position: absolute;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: end;
+  margin: 150px;
+  font-size: 15px;
+  animation: bouncing 1.5s infinite;
+}
+@keyframes bouncing {
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  30%,
+  60% {
+    transform: translateY(-25px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .up {
+    margin: 70px 151px;
+  }
+}
+/*==================================================== End footer ===========================================*/
